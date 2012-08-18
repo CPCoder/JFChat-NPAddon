@@ -1,0 +1,38 @@
+/* Text-Colors */
+.color_red{
+	color:#FF0000;
+}
+
+/* Link Settings */
+a{
+	text-decoration:none;
+}
+a:hover{
+	text-decoration:none;
+}
+a:visited{
+	text-decoration:none;
+}
+
+/* Text Settings */
+.text_left{
+	text-align:left;
+}
+.text_right{
+	text-align:right;
+}
+.text_center{
+	text-align:center;
+}
+
+/* Paddings */
+.padding_4{
+	padding:4px;
+}
+
+/* EDIT-INFO */
+.editinfo{
+	color:#FF0000;
+	font-style:italic;
+	font-weight:bold;
+}

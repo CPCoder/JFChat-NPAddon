@@ -1,0 +1,177 @@
+Version 2.4.11
+==============
+Bugfix	: Ist der Nickpagebesucher gleich der Nickpage-Inhaber und hat Adminrechte, wurde der Edit-Link zum 
+		  editieren eine GB-Eintrages nicht angezeigt.
+Bugfix	: Fehler in Verbindung mit JFChat-Emos behoben.
+Bugfix	: Fehler beim editieren einer Bilder-Galerie behoben.
+Bugfix	: War man nicht im Besitz einer Vollversion des NP-Addons, konnte man manuell in der Datenbank weitere
+		  Kategorien anlegen, welche dann auch angezeigt wurden. Dies wurde nun dadurch unterbunden, dass auch
+		  nur 1 Kategorie angezeigt wird, wenn keine Vollversion des Addons genutzt wird.
+Feature	: Ab sofort kann man einstellen ob man die JFChat-Emoticons im Addon zulässt oder nicht.
+Update	: Ist man im Besitz einer Vollversion des Nickpage-Addons, kann man nun soviele Bilder-Kategorien anlegen
+		  wie man möchte. Die Beschränkung auf max. 10 Kategorien in der Vollversion wurde aufgehoben :)
+Update	: Dem Addon wurde die aktuelle Version des ionCube Loader-Wizards beigefügt (Betrifft nur die Erstinstal-
+		  lations-Pakete!).
+
+Version 2.4.10
+==============
+Bugfix	: Wurde ein Gästebuchbeitrag oder Blogeintrag editiert, kam es unter Umständen zu Fehldarstellungen 
+		  bei dem Bearbeitungs-Hinweis.
+Bugfix	: Fehler bei der Bearbeitung der Nickpage-Anzeige behoben.
+Bugfix	: Die Datei "test.php" im "include"-Verzeichnis war fäschlicherweise verschlüsselt.
+Bugfix	: Fehlende Dateien wieder dem Archiv beigefügt:
+		  - /docs/Wichtige Variablen zur Entwicklung eigener Extensions.txt
+		  - /JFChat-Templates/sidcheck.htmJFChat-Templates
+Feature	: Neue Option zum aktivieren/deaktiveren des Youtube-BBCodes.
+Update	: Änderung der Verschlüsselung von ZendGuard auf ionCube.
+Update	: Komplette Umstellung des Codes auf PHP 5.3.x Umgebungen!
+Update	: Diverse Datenbankabfragen optimiert.
+Update	: Installationsdokument aktualisiert.
+
+Version 2.4.9 Build 2
+=====================
+Bugfix	: War die Option "Nur für Freunde" aktiv, konnten auch Administratoren nicht auf die Nickpage.
+Bugfix	: Youtube-Tags wurden nur umgesetzt wenn sie klein geschrieben waren
+Bugfix	: Diverse Fehler in Bezug auf die neuen Funktionen "No Blocksites" und "No Head-/Foot-Sites" behoben.
+Update	: Fehlendes Template "guestbook_edit.tpl" beigefügt.
+
+
+Version 2.4.9
+=============
+Bugfix	: Ohne gültige Lizenz für die Chatsoftware waren die Funktionen für Administratoren nicht verfügbar.
+Bugfix	: In der "config.php" kann nun ein externer Pfad zu den Profilbildern eingestellt werden. Dies ist
+	  	  notwendig, wenn auch innerhalb der JFChat-Software ein externen Pfad angegeben wurde.
+Bugfix	: Wird beim Bearbeiten, Löschen oder Kommentieren eines Gästebuchbeitrages eine unbekannte Beitrags-
+	  	  ID übergeben, so bekommt man nun eine entsprechende Fehlermeldung.
+Bugfix	: War die Option "Nur für Freunde" aktiv, konnten auch Administratoren nicht auf die Nickpage.
+Feature	: Administratoren können nun Gästebuchbeiträge und Blogeinträge bearbeiten, bzw. löschen. Das Motto
+	  	  kann nur gelöscht, aber nicht bearbeitet werden!
+Feature	: Das Addon kann nun in Verbindung mit dem ACC genutzt werden, um Galeriebilder erst nach Prüfung
+	  	  durch einen Admin freizuschalten.
+Feature	: Neuer BBCode-Tag für Youtube-Videos.
+	  	  HINWEIS: Dieser Code-Tag ist explizit nur für Youtube-Videos!
+
+Version 2.4.8
+=============
+Bugfix	: Beim Löschen des letzten Blog-/Gästebucheintrages gab es eine Fehlermeldung bzwl. eines 
+	  	  falschen MySQL-Querys.
+Bugfix	: Einzelnes Mitglied konnte mehrfach auf die Blockliste gesetzt werden.
+Bugfix	: Fehlende Fehlermeldung für Blockliste nachgeliefert.
+Bugfix	: Maximale Anzahl der Bilder pro Kategorie wurde nicht geprüft.
+Bugfix	: Zähler für geschriebene und erhalten Gästebucheinträge wurde nicht erhöht.
+Feature	: Einzelne eigene Seiten (Extensions) können von Blockprüfungen (Nur für Freunde/für Niemanden,
+	  	  Durch Admin gesperrt, einzelne SPerrung durch Nickpage-Inhaber) ausgenommen werden.
+Feature	: Einzelne eigene Seiten (Extensions) können ohne Addon-Header/Footer aungezeigt werden.
+
+Version 2.4.7
+=============
+Bugfix	: Schliessen einer kritischen Sicherheitslücke.
+Bugfix	: Fehler beim Error-Reporting behoben.
+Update	: Diverse Datenbankabfragen wurden optimiert.
+
+Version 2.4.6
+=============
+Bugfix	: Falsch initialisierte Variable "$unknowuser" führte zu einer NOTICE-Fehlermeldung beim
+	  	  Error-Reporting von PHP
+Bugfix	: Fehler beim Einbinden von eigenen Dateien aus dem "extensions"-Verzeichnis behoben.
+Feature	: Die Anzeige von PHP-Fehlern kann nun frei eingestellt werden, entweder lässt man sich
+	  	  die Fehler wie gewohnt immer am Anfang der Seite anzeigen, oder man lässt sich PHP-Fehler
+	  	  nun direkt im Debug-Bereich mit ausgeben.
+Update	: Die PHP-Dokumentation der TPL-Engine wurde erweitert. Es wurden einige der wichtigsten
+	  	  Funktionen der "functions_global.php" in die Dokumentation aufgenommen. Diese Funktionen
+	  	  sind für Entwickler eigener Extensions sehr hilfreich.
+Update	: Im Verzeichnis "docs" liegt eine Zusätzliche Datei, welche einige Variablen beinhaltet,
+	  	  welche für die Entwicklung eigener Extensions hilfreich sind.
+
+Version 2.4.5
+=============
+Bugfix	: Schliessen einer weiteren XXS-Lücke im Bereich der Bilder-Galerie
+Bugfix	: Fehler in der Installations-Routine behoben (Gilt nur für die Erstinstallation-Pakete!)
+Feature	: Neue Datei "test.php" im "include"-Verzeichnis, welche nicht verschlüsselt ist.
+	  	  Um diese Datei aufzurufen muss in der "othersettings.php" der Wert der Variable
+	 	  "$activateTestFile" auf "true" gesetzt werden. Danach kann diese Datei aufgerufen werden,
+	  	  wenn man in der URL bei dem Parameter "site=" den Wert "test" übergibt. Hierbei wird dann
+	  	  aus dem "templates"-Verzeichnis das Template "test.tpl" eingebunden.
+
+Version 2.4.4 build2
+====================
+Bugfix	: Schliessen einer XXS-Lücke im Bereich der Bilder-Galerie
+
+Version 2.4.4 build2
+====================
+Bugfix	: Fehlerhafte Auswertung des Freundesstatus, statt der Freundesliste des Nickpage-Inhabers wurde
+	  	  die Freundesliste des Nickpage-Besuchers ausgewertet in Bezug auf "NP only for friends".
+Bugfix	: Es konnten keine Bildergalerien gelöscht werden.
+Bugfix	: Hochgeladene Bilder konnten nicht gelöscht werden, da beim hochladen der Bilder ein falscher
+	  	  CHMOD gesetzt wurde.
+Bugfix	: Nickpage-Inhaber konnte sich selber und Administratoren blocken.
+Bugfix	: Im Blog und Gästebuch war SQL-Injection möglich.
+
+
+Version 2.4.4
+=============
+Bugfix	: Wurde beim editieren eines Blogeintrages die Vorschau genutzt, wurde ein neuer Eintrag gemacht.
+Bugfix	: Addon-Emoticons wurden beim editieren eines Blogeintrages in der Vorschau nicht angezeigt.
+Bugfix	: Durch eine nicht initialisierte Variable ($npblocks) kam es zu Fehlermeldungen.
+Bugfix	: Fehlende Hinweismeldung wenn das Mitglied nicht (mehr) existiert, dessen Nickpage aufgerufen wird.
+Feature	: Beim Gästebuch kann nun gewählt werden ob auch die Beiträge von gelöschten Usern angezeigt werden
+          sollen.
+Feature	: Einstellungsmöglichkeit zur Anzeige der Nickpage "Nur für Freunde" hinzugefügt. Dies bringt nun auch
+	  	  die Funktionalität für die schon zur Verfügung stehende Spalte "nponlyfriends"!
+
+Version 2.4.3 build 2
+=====================
+Bugfix	: Fehlender Hinweis in README zum hinzufügen der Spalte "nponlyfriends"
+Bugfix	: Nicht initialisierte Variable $minutes, dies führte zu einer Fehlermeldung beim
+	  	  hinzufügen eines neuen Gästebuchbeitrages.
+Bugfix	: Fehler in der Installations-Routine des Erstinstallations-Paketes behoben.
+Feature	: Unverschlüsselte PHP-Datei "error_reporting.php". Hier kann durch das Aus-/Einkommentieren
+	  	  der darin enthaltenen Zeilen das Error-Reporting des PHP-Interpreters aktiviert, bzw.
+	  	  deaktiviert werden.
+
+Version 2.4.3
+=============
+Bugfix	: Fehler bei der Anzeige des Geburtsdatums behoben. Hier wurde der 01.01.1970 angezeigt, 
+	  	  wenn das Geburtsdatum vor diesem Datum lag.
+Bugfix	: Fehlerhafte Ausgabe der Besucherliste behoben. Es gab hier keine Begrenzung auf die
+	  	  letzten 10 Einträge.
+Bugfix	: Fehler beim Eintragen eines neuen Blogbeitrages. Emoticons wurden nicht durch anklicken
+	  	  in das Eingabefeld geparst.
+Bugfix	: Fehlerhafte Ausgabe von Gästebuchbeiträgen behoben. Hier wurde statt der Emoticons der
+	  	  HTML-Code dargestellt.
+Bugfix	: Skalierung der Avatare bei Gästebuchbeiträgen (sofern aktiviert) entfernt.
+Bugfix	: Fehler im Blog behoben. Es konnte beim Eintragen eines neuen Beitrages ein MySQL-Error auftreten.
+Änderung: Beim anklicken von Usernamen in der Besucherliste, Freundesliste, sowie Gästebuchbeiträgen
+	  	  wird die zugehörige Nickpage nun in einem Popup-Fenster geöffnet statt in einem Browserfenster
+	  	  in voller Grösse.
+Feature	: Im Gegensatz zu der Version 2.3 des Nickpage-Addons können nun einzelne User komplett aus der
+	  	  Nickpage ausgesperrt werden. In der Version 2.3 bezog sich dies nur auf das Gästebuch.
+Feature	: Es gibt eine neue Datei "self_global.php" im "config"-Verzeichnis. Hier kann eine eigene
+	  	  Datenbank-Abfrage erstellt werden und die Ergebnisse innerhalb jeden Templates des Nickpage-
+	  	  Addons ausgegeben werden. Ein ausführliches Beispiel ist in der Datei enthalten.
+	  	  Beispiel-Nutzen: Abfrage bestimmter Spalten der Registry-Tabelle des Nickpage-Inhabers, in denen
+		  z.B. Angaben für einen eigenen Design-Style der Nickpage enthalten sind.
+
+
+Version 2.4.2
+=============
+Bugfix	: Fehler bei der Einbindung der BBCode-Klasse behoben
+Bugfix	: Fehlende Variable zum Anzeigen des Geschlechts bei Gästebuchbeiträgen
+Feature	: Statt dem Userbild kann nun bei den Gästebuchbeiträgen alternativ das
+	  	  Avatar des Posters angezeigt werden.
+
+
+Version 2.4.1
+=============
+Bugfix: Falsches Tabellenprefix bei der Installation der zusätzlichen Tabellen
+Bugfix: Fehlende Spalten "nplock" und "editinfo" bei der Installation
+Bugfix: Sperr-/Entsperr-Funktion der Nickpages durch einen Administrator fehlte
+Bugfix: Einblendung des Copyrights trotz gültiger NPAddon-Lizenz
+Bugfix: JQuery-Bibliothek fehlte
+
+
+Version 2.4
+===========
+- Eigene Template-Engine, dadurch strikte Trennung von HTML und PHP
+- Modularer Aufbau, dadurch können eigene Module (Extensions) dazu programmiert werden
+- Schutz vor SQL-Injections

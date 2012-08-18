@@ -1,0 +1,15 @@
+Zur Verfügung stehende $_REQUEST-Variablen aus der "nickpage.php".
+Diese Variablen werden von der "nickpage.php" von Haus aus abgefragt wenn sie
+gesetzt wurden.
+Variable 	GET-Parameter	Inhalt
+$sessionID	sid		SessionID des Users (Muss gesetzt sein!)
+$showid		showid		UserID des Nickpage-Inhabers (Muss gesetzt sein!)
+$senduid	senduid		UserID des Besuchers (Muss gesetzt sein!)
+$auth		auth		Auth-Parameter des JFChats (wenn gesetzt)
+$site		site		Name der PHP-Datei die angesprochen werden soll
+
+Sonstige zur Verfügung stehende Variablen
+Variable	Inhalt
+$userip		IP des Users (Besuchers)
+$userAgent	UserAgent des Users (Besuchers)
+
